@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Seven MTG creators drawn as planeswalkers. The five asks, ownership terms, and where to answer.">
+<meta property="og:title" content="Planepals — a BiakaPlays project">
+<meta property="og:description" content="Seven MTG creators drawn as planeswalkers, printed, and mailed. Here is what I need from you.">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}</style>
+<title>Planepals — BiakaPlays</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap">
+<style>
+  :root{
+    --teal:#38A79C; --mint:#A5F6DC; --paper:#EDEDED; --fold:#C4C4C4;
+    --ink:#16181A; --white:#FFFFFF; --teal-deep:#2B8479;
+    --disp:'Anton', Impact, 'Arial Narrow Bold', sans-serif;
+    --body:'Inter', system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    --line:3px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--body); font-size:17px; line-height:1.5;
+    padding-block:0 64px; padding-inline:16px;
+    background-image:radial-gradient(circle at 20% 0%, #fff 0%, var(--paper) 45%, #dcdcdc 100%);
+  }
+  .wrap{max-width:960px; margin:0 auto}
+  a{color:inherit}
+  a:focus-visible,button:focus-visible{outline:4px solid var(--teal); outline-offset:3px}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative; padding:96px 0 32px; overflow:visible}
+  .stamp{
+    display:inline-block; transform:rotate(-14deg); transform-origin:left bottom;
+    font-family:var(--disp); text-transform:uppercase; line-height:.82; letter-spacing:-.01em;
+    font-size:clamp(34px,7vw,64px);
+    background:repeating-linear-gradient(180deg,var(--mint) 0 3px,var(--teal) 3px 6px);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter:drop-shadow(3px 4px 0 var(--teal-deep));
+    margin:0 0 28px 8px;
+  }
+  .stamp span{display:block}
+  h1{
+    font-family:var(--disp); text-transform:uppercase; line-height:.86; letter-spacing:-.01em;
+    font-size:clamp(46px,11vw,120px); margin:0; text-wrap:balance;
+  }
+  h1 em{font-style:normal; color:var(--teal)}
+  .hero p.lede{font-size:clamp(18px,2.4vw,22px); font-weight:600; max-width:34em; margin:24px 0 0}
+  .badges{display:flex; flex-wrap:wrap; gap:14px; margin-top:28px}
+  .badge{
+    font-family:var(--body); font-weight:800; text-transform:uppercase; letter-spacing:.1em; font-size:13px;
+    padding:10px 16px; border:var(--line) solid var(--ink); background:var(--white);
+    box-shadow:5px 5px 0 var(--ink); transform:rotate(-2deg);
+  }
+  .badge:nth-child(2n){transform:rotate(1.5deg); background:var(--mint)}
+  .badge.teal{background:var(--teal); color:var(--white)}
+
+  /* ---------- blocks ---------- */
+  .block{
+    border:var(--line) solid var(--ink); background:var(--white);
+    box-shadow:8px 8px 0 var(--ink); padding:28px; margin-top:40px;
+  }
+  .block.teal{background:var(--teal); color:var(--white)}
+  .block.mint{background:var(--mint)}
+  .block.ink{background:var(--ink); color:var(--white); box-shadow:8px 8px 0 var(--teal)}
+  .kicker{
+    font-family:var(--body); font-weight:800; text-transform:uppercase; letter-spacing:.14em; font-size:12px;
+    margin:0 0 6px; opacity:.85;
+  }
+  h2{
+    font-family:var(--disp); text-transform:uppercase; line-height:.9; letter-spacing:-.005em;
+    font-size:clamp(34px,5.5vw,56px); margin:0 0 18px; text-wrap:balance;
+  }
+  .block p{max-width:38em; margin:0 0 14px}
+  .block p:last-child{margin-bottom:0}
+
+  /* asks */
+  .asks{list-style:none; padding:0; margin:0; display:grid; gap:14px; counter-reset:ask}
+  .asks li{
+    counter-increment:ask; display:grid; grid-template-columns:64px 1fr; gap:16px; align-items:start;
+    border:var(--line) solid var(--ink); background:var(--paper); padding:14px 16px 14px 12px;
+  }
+  .asks li::before{
+    content:counter(ask); font-family:var(--disp); font-size:48px; line-height:.9; color:var(--teal);
+    text-align:center; padding-top:2px;
+  }
+  .asks b{display:block; font-weight:800; text-transform:uppercase; letter-spacing:.04em; font-size:15px; margin-bottom:4px}
+  .asks span{display:block; font-size:16px}
+
+  /* two-up */
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:40px}
+  .two .block{margin-top:0}
+  @media (max-width:720px){.two{grid-template-columns:1fr}}
+
+  .rule{border:0; border-top:var(--line) solid currentColor; opacity:.35; margin:18px 0}
+  ul.plain{padding-left:1.2em; margin:0 0 14px; max-width:38em}
+  ul.plain li{margin-bottom:8px}
+
+  /* example card */
+  .cardwrap{display:grid; grid-template-columns:minmax(0,300px) 1fr; gap:28px; align-items:start}
+  @media (max-width:720px){.cardwrap{grid-template-columns:1fr}}
+  .pw{
+    border:var(--line) solid var(--ink); background:var(--white); box-shadow:6px 6px 0 var(--ink);
+    transform:rotate(-2.5deg); padding:10px; max-width:100%;
+  }
+  .pw .art{
+    aspect-ratio:4/3; max-width:100%; border:var(--line) solid var(--ink);
+    background:repeating-linear-gradient(-45deg,var(--teal) 0 12px,var(--teal-deep) 12px 24px);
+    display:grid; place-items:center; color:var(--white); font-family:var(--disp); text-transform:uppercase;
+    font-size:22px; letter-spacing:.02em; text-align:center; padding:8px;
+  }
+  .pw .name{display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 6px 6px}
+  .pw .name b{font-family:var(--disp); font-weight:400; text-transform:uppercase; font-size:19px; letter-spacing:.01em}
+  .pw .cost{font-weight:800; font-size:13px; letter-spacing:.08em; border:2px solid var(--ink); padding:2px 6px; white-space:nowrap}
+  .pw .ab{display:grid; grid-template-columns:44px 1fr; gap:8px; align-items:start; font-size:13px; line-height:1.35; padding:5px 6px; border-top:2px solid var(--paper)}
+  .pw .ab i{font-style:normal; font-family:var(--disp); font-size:20px; color:var(--teal); text-align:center}
+  .pw .loy{text-align:right; font-family:var(--disp); font-size:22px; padding:6px 8px 0; color:var(--teal)}
+  .spec{font-size:16px}
+  .spec dt{font-weight:800; text-transform:uppercase; letter-spacing:.06em; font-size:12px; margin-top:12px; color:var(--teal-deep)}
+  .spec dd{margin:2px 0 0}
+
+  /* timeline */
+  .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
+  @media (max-width:720px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:420px){.steps{grid-template-columns:1fr}}
+  .step{border:var(--line) solid var(--white); padding:14px}
+  .step b{display:block; font-family:var(--disp); font-weight:400; font-size:24px; line-height:1; text-transform:uppercase; margin-bottom:6px; color:var(--mint)}
+  .step span{font-size:15px}
+
+  /* CTA */
+  .cta{
+    display:inline-block; font-family:var(--disp); text-transform:uppercase; font-size:clamp(24px,4vw,34px); letter-spacing:.01em;
+    color:var(--white); background:var(--teal); border:var(--line) solid var(--ink); box-shadow:8px 8px 0 var(--ink);
+    padding:16px 26px; text-decoration:none; transition:transform .12s, box-shadow .12s;
+  }
+  .cta:hover{transform:translate(2px,2px); box-shadow:6px 6px 0 var(--ink)}
+  .cta.sub{background:var(--white); color:var(--ink); font-size:clamp(18px,3vw,24px)}
+  .ctas{display:flex; flex-wrap:wrap; gap:22px; align-items:center; margin-top:24px}
+  .fine{font-size:14px; opacity:.8; margin-top:16px}
+  .ctas + .fine{margin-top:28px}
+
+  footer{margin-top:56px; text-align:left; font-size:14px}
+  footer .sig{font-family:var(--disp); text-transform:uppercase; font-size:28px; line-height:1; color:var(--teal); margin-bottom:6px}
+  @media (prefers-reduced-motion:reduce){.cta{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <div class="stamp" aria-label="BiakaPlays"><span>Biaka</span><span>Plays</span></div>
+    <h1>Plane<em>pals</em></h1>
+    <p class="lede">My channel hits two months next week. Seven of you made that fun instead of lonely. So my sister and I are drawing you as planeswalkers, printing real cards, and mailing them to you — with a stack of proxies you can hand out at your own table.</p>
+    <div class="badges">
+      <span class="badge teal">Deadline · Sat Sept 27 · 1:00 AM CST</span>
+      <span class="badge">10 minutes of your time</span>
+      <span class="badge">You own the art</span>
+    </div>
+  </header>
+
+  <section class="block">
+    <p class="kicker">The ask</p>
+    <h2>Five things I need from you</h2>
+    <ol class="asks">
+      <li><div><b>A photo of you in a pose</b><span>Holding something, pointing, whatever feels like you. Or just describe the pose and we'll invent it.</span></div></li>
+      <li><div><b>Your WUBRG cost</b><span>What colors are you and how many pips? Example: 2RG.</span></div></li>
+      <li><div><b>Your planeswalker abilities</b><span>Starting loyalty plus a +, a −, and an ultimate. Example: "+1: Create a Treasure token."</span></div></li>
+      <li><div><b>Funny or serious, playable or broken</b><span>Your call. Both are welcome. Nobody's judging power level here.</span></div></li>
+      <li><div><b>Your style and home plane</b><span>Where are you from? Cyberpunk Ravnica? Cozy cottage plane? Give us a vibe and we'll draw it.</span></div></li>
+    </ol>
+    <p class="fine">Plus a mailing address so the real cards can find you. Everything goes in the Google Doc linked at the bottom.</p>
+  </section>
+
+  <div class="two">
+    <section class="block mint">
+      <p class="kicker">Ownership</p>
+      <h2>You own it. Full stop.</h2>
+      <p>I'll send each of you a short MOU that says it in writing: you own your planeswalker image and the card. You are not obligated to me, my sister, or any other entity outside of yourself for it.</p>
+      <p>Use it on your channel, your merch, your playmat, your tokens. No permission needed. No credit required.</p>
+      <hr class="rule">
+      <p><strong>The one ask:</strong> don't use it in content that is racist, fascist, anti-LGBTQIA+, or sexual in nature involving minors. Basic decent human policy. That's it.</p>
+    </section>
+
+    <section class="block">
+      <p class="kicker">My side of the deal</p>
+      <h2>What I get</h2>
+      <p>A video celebrating you all at my two-month mark, and hopefully a collab where we talk about the art, the process, and why I love your page.</p>
+      <p>That's the whole deal. No sponsorship, no merch tie-in, nothing to promote.</p>
+      <hr class="rule">
+      <p>Share the video if you want. If not, the card is still yours.</p>
+    </section>
+  </div>
+
+  <section class="block">
+    <p class="kicker">Example</p>
+    <h2>So you can see the format</h2>
+    <div class="cardwrap">
+      <div class="pw" aria-label="Example planeswalker card">
+        <div class="art">Your art<br>goes here</div>
+        <div class="name"><b>Biaka, the Professional Beginner</b><span class="cost">2 R G</span></div>
+        <div class="ab"><i>+1</i><span>Create a 1/1 red Goblin creature token. It has haste.</span></div>
+        <div class="ab"><i>−2</i><span>Target creature gets +X/+X until end of turn, where X is the number of creatures you control.</span></div>
+        <div class="ab"><i>−7</i><span>You get an emblem with "Whenever a creature you control attacks, it gains double strike until end of turn."</span></div>
+        <div class="loy">4</div>
+      </div>
+      <dl class="spec">
+        <dt>Photo / pose</dt><dd>Holding a fanned hand of cards, squinting at them like they owe me money.</dd>
+        <dt>Cost</dt><dd>2RG</dd>
+        <dt>Loyalty</dt><dd>4</dd>
+        <dt>Tone</dt><dd>Playable, slightly goofy.</dd>
+        <dt>Style / home plane</dt><dd>A plane that looks like a Kansas City game shop at midnight. Neon signs, card sleeves everywhere, Krenko posters on the wall.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="block ink">
+    <p class="kicker">What happens next</p>
+    <h2>From doc to mailbox</h2>
+    <div class="steps">
+      <div class="step"><b>Answers</b><span>You fill in your section of the Google Doc by Sept 27.</span></div>
+      <div class="step"><b>Drawing</b><span>My sister and I draw. You get a private preview before anything goes public.</span></div>
+      <div class="step"><b>Reaction</b><span>Send a 5-second reaction clip if you're up for it. It goes in the video.</span></div>
+      <div class="step"><b>Mail</b><span>Printed card, digital assets, the MOU, and a stack of proxies ship to you.</span></div>
+    </div>
+  </section>
+
+  <section class="block teal">
+    <p class="kicker">Do the thing</p>
+    <h2>Fill in your section</h2>
+    <p>Find your name in the doc, answer the five asks, drop your photo in or DM it to me. Ten minutes, promise.</p>
+    <div class="ctas">
+      <a class="cta" href="https://docs.google.com/document/d/1X7jotUBfAm1VgV46XWeoMJ1BMiiGvcbioS2jOmjDkkE/edit">Open the Google Doc</a>
+      <a class="cta sub" href="https://www.figma.com/board/wCs37QID5Uin4VZ3s9tWrd">Track your card's progress</a>
+    </div>
+    <p class="fine">The progress board shows where each card is: asked → answers in → drawing → card built → preview → printed and mailed → posted.</p>
+  </section>
+
+  <footer>
+    <div class="sig">Thanks for being at the table.</div>
+    <div>A BiakaPlays project · Kansas City</div>
+  </footer>
+</div>
+
+</body>
+</html>
