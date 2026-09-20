@@ -158,6 +158,17 @@
   .board .fine{margin-top:18px}
   @media (max-width:720px){.board{grid-template-columns:1fr} .board .preview{margin-bottom:8px}}
   .ctas + .fine{margin-top:28px}
+  /* MOU preview */
+  .mou{display:grid; grid-template-columns:minmax(0,1fr) minmax(240px,320px); gap:36px; align-items:start; margin-top:22px}
+  @media (max-width:720px){.mou{grid-template-columns:1fr}}
+  .doc{background:var(--white); border:var(--line) solid var(--ink); box-shadow:8px 8px 0 var(--ink); padding:26px 28px; transform:rotate(-.6deg)}
+  .doc .dochead{font-family:var(--disp); text-transform:uppercase; font-size:26px; line-height:1; margin:0 0 4px}
+  .doc .docsub{font-size:13px; opacity:.6; margin:0 0 14px; text-transform:uppercase; letter-spacing:.1em; font-weight:800}
+  .doc ol{margin:0; padding-left:1.4em}
+  .doc li{margin-bottom:10px; font-size:15px}
+  .doc li b{display:block; font-weight:800}
+  .doc .sigline{margin-top:18px; padding-top:12px; border-top:2px dashed rgba(22,24,26,.35); font-size:13px; opacity:.7; display:flex; justify-content:space-between; gap:12px}
+  .mou .fine{margin-top:18px}
 
   footer{margin-top:56px; text-align:left; font-size:14px}
   footer .sig{font-family:var(--disp); text-transform:uppercase; font-size:28px; line-height:1; color:var(--teal); margin-bottom:6px}
@@ -268,6 +279,31 @@
       <div>
         <div class="ctas"><a class="cta sub" href="https://www.figma.com/board/wCs37QID5Uin4VZ3s9tWrd" target="_blank" rel="noopener">Open the progress board</a></div>
         <p class="fine">The board shows where each card is: asked → answers in → drawing → card built → preview → delivered → posted.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <p class="kicker">The paperwork</p>
+    <h2>The MOU, in plain English</h2>
+    <p>Here's a preview of the agreement you'll sign when your card is delivered. It's short on purpose, and it isn't lawyered up.</p>
+    <div class="mou">
+      <div class="doc" aria-label="MOU preview">
+        <p class="dochead">Planepals Card MOU</p>
+        <p class="docsub">Preview · six sections · two minutes</p>
+        <ol>
+          <li><b>What this covers</b>The drawing of you, the card layout, the digital files, and any previews along the way.</li>
+          <li><b>You own the card</b>Post it, print it, put it on merch and keep the money. No permission, no credit needed beyond the signature.</li>
+          <li><b>What I keep</b>The right to show the card and the process in my own content, and to name you as the person it was made for.</li>
+          <li><b>The four asks</b>Keep the @biakaplays signature. No AI editing or generation. No hateful use. Don't claim someone else drew it.</li>
+          <li><b>What I do and don't promise</b>Drawn in my art style from your answers. Limited revisions. Digital files only, no delivery date guaranteed.</li>
+          <li><b>Money and backing out</b>None, and either of us can stop before delivery. If something goes wrong, we talk first.</li>
+        </ol>
+        <div class="sigline"><span>Signed: ________________</span><span>Date: ____ / ____ / ______</span></div>
+      </div>
+      <div>
+        <div class="ctas"><a class="cta sub" href="https://docs.google.com/forms/d/e/1FAIpQLSexb31h1LjtWlkQs_Nx9PGZgxAHVCmfWMHW0wuQd8rz_eN3qw/viewform" target="_blank" rel="noopener">Read the full MOU</a></div>
+        <p class="fine">The full text lives inside the signing form. Read it now if you like, but don't sign yet — I'll send you the link with your finished card, and typing your name there is the signature.</p>
       </div>
     </div>
   </section>
